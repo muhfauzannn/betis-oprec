@@ -14,28 +14,25 @@ export default function Signup() {
     const [isLengthValid, setLengthPassword] = useState(false);
     const [isContainNumber, setContainNumber] = useState(false);
     const [error, setError] = useState<string | null>(null);
-    const [isLoading, setIsLoading] = useState(false); // State untuk loader
+    const [isLoading, setIsLoading] = useState(false); 
     const router = useRouter();
 
     const handleValidPassword = (event: React.ChangeEvent<HTMLInputElement>) => {
         const password = event.target.value;
         setPassword(password);
 
-        // Check if password is at least 12 characters
         const isLengthValid = password.length >= 12;
         setLengthPassword(isLengthValid);
     
-        // Check if password contains a number
         const isContainNumber = /\d/.test(password);
         setContainNumber(isContainNumber);
     
-        // Password is valid if it meets both criteria
         setIsValidPassword(isLengthValid && isContainNumber);
     };
 
     async function handleSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
-        setIsLoading(true); // Aktifkan loader
+        setIsLoading(true); 
         
         try {
             const response = await fetch('/api/signup', {
@@ -54,7 +51,7 @@ export default function Signup() {
         } catch (error) {
             setError('An unexpected error occurred.');
         } finally {
-            setIsLoading(false); // Matikan loader
+            setIsLoading(false); 
         }
     }
 

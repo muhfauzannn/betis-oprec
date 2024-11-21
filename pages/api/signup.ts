@@ -13,7 +13,6 @@ export default async function signupHandler(req: NextApiRequest, res: NextApiRes
 
     const dataUser = readDataUser();
 
-    // Check if the user already exists
     const userExists = dataUser.some((user) => user.email === email);
     if (userExists) {
       return res.status(400).json({ error: 'User with this email already exists.' });
@@ -32,7 +31,7 @@ export default async function signupHandler(req: NextApiRequest, res: NextApiRes
     const cookie = serialize('session', sessionToken, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
-      maxAge: 60 * 60 * 24 * 7, // 1 minggu
+      maxAge: 60 * 60 * 24 * 7, 
       path: '/',
     });
 
