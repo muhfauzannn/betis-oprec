@@ -38,8 +38,8 @@ export default function Signup() {
         setIsLoading(true); // Aktifkan loader
         
         try {
-            const response = await fetch('', {
-                method: 'GET',
+            const response = await fetch('/api/signup', {
+                method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ name, email, password }),
             });
