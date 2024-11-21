@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import logout from '@/lib/logout';
 
 // Definisi tipe data
 interface Buku {
@@ -149,6 +150,17 @@ export default function Dashboard() {
                     </div>
                 </div>
             </div>
+            
+            <div className="flex gap-2 justify-center items-center absolute bottom-4 right-4">
+                <p className="text-white font-sans font-bold">Sign Out</p>
+                <button
+                    className={`p-2 bg-white text-white rounded-full duration-150 hover:opacity-70 ${isAllBook ? 'opacity-100' : 'opacity-70'}`}
+                    onClick={logout}
+                    >
+                    <Image src={`/icon/sign-out-alt.svg`} alt="" width={15} height={15} />
+                </button>
+            </div>
+            
         </>
     );
 }

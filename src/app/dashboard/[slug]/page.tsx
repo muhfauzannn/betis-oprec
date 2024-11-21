@@ -23,7 +23,7 @@ interface BukuSihirResponse {
     bukuSihir: BukuSihir;
 }
 
-const tipePenyihirOption = ["ELEMENTER", "PENYEMBUHAN", "KUTUKAN"];
+const tipePenyihirOption = ["ELEMENTAL", "PENYEMBUHAN", "KUTUKAN"];
 const statusOption = ["TERSEDIA", "DIPINJAM", "HILANG"];
 
 export default function Dashboard() {

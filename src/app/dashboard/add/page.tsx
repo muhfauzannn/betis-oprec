@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Terminal } from "lucide-react";
 
-const tipePenyihirOption = ["ELEMENTER", "PENYEMBUHAN", "KUTUKAN"];
+const tipePenyihirOption = ["ELEMENTAL", "PENYEMBUHAN", "KUTUKAN"];
 const statusOption = ["TERSEDIA", "DIPINJAM", "HILANG"];
 
 export default function CreateNewBook() {

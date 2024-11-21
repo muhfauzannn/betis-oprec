@@ -4,5 +4,17 @@
     "name": "Fauzan",
     "email": "fauzanganteng@gmail.com",
     "password": "$2b$10$hNKZqDBES9/71h39ienAOefX0GFNwBQrOYydERz3Z7h0AGAIEhz3q"
+  },
+  {
+    "id": 2,
+    "name": "Ronaldo",
+    "email": "ronaldo@gmail.com",
+    "password": "$2b$10$q0AyC3aa/rwnTBnS8jynGu4pimzNv5eRY/IvckeS4nCBrQTXD38uC"
+  },
+  {
+    "id": 3,
+    "name": "Messi Gaming",
+    "email": "messi@gmail.com",
+    "password": "$2b$10$jUAv.7aP8n8vEnSlLrQ91uh4dHxKw/Q/TVO78mvGjvRnaoh7IMvae"
   }
 ]
