@@ -47,7 +47,6 @@ export default function Signup() {
                 const errorData = await response.json();
                 setError(errorData.error);
             }
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         } catch (error) {
             setError('An unexpected error occurred.');
         } finally {
