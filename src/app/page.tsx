@@ -29,7 +29,8 @@ export default function Signup() {
                 const errorData = await response.json();
                 setError(errorData.error);
             }
-        } catch (error) {
+        } catch (error:unknown) {
+            console.error('Error:', error);
             setError('An unexpected error occurred.');
         } finally {
             setIsLoading(false); // Matikan loader

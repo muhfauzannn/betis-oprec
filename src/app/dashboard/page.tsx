@@ -63,8 +63,8 @@ export default function Dashboard() {
                     setBooks([]);
                     setFilteredBooks([]);
                 }
-            } catch (error) {
-                console.error("Error fetching books:", error);
+            } catch (error:unknown) {
+                console.error("Error fetching books", error);
                 setBooks([]);
                 setFilteredBooks([]);
             } finally {

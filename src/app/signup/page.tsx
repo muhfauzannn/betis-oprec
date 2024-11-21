@@ -47,7 +47,8 @@ export default function Signup() {
                 const errorData = await response.json();
                 setError(errorData.error);
             }
-        } catch (error) {
+        } catch (error:unknown) {
+            console.error('An unexpected error occurred:', error);
             setError('An unexpected error occurred.');
         } finally {
             setIsLoading(false); 

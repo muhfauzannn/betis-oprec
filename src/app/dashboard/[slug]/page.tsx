@@ -76,7 +76,7 @@ export default function Dashboard() {
                 setJumlah(data.bukuSihir.jumlah);
                 setTipeSihir(data.bukuSihir.tipeSihir);
                 setStatus(data.bukuSihir.status);
-            } catch (err: any) {
+            } catch (err: unknown) {
                 console.error(err);
             } finally {
                 setLoading(false);
