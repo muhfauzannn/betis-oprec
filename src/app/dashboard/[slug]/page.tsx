@@ -135,7 +135,7 @@ export default function Dashboard() {
             setLoadingSubmit(false);
         }
     };
-
+    console.log(book)
     const handleDelete = async () => {
         try {
             setLoadingDelete(true);
